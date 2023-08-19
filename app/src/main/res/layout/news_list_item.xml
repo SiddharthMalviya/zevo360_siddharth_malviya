@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/card_box_shape"
+    android:layout_marginBottom="10sp"
+    app:cardCornerRadius="15dp"
+    android:layout_height="260dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp">
+    <ImageView
+        android:layout_width="match_parent"
+         android:src="@drawable/bg_img"
+        android:scaleType="fitXY"
+        android:id="@+id/img_bg"
+        android:layout_height="260dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="by Ryan Browne"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:id="@+id/txt_by_author"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_by_author"
+        android:text="Crypto investors should be prepared to jose all their money, BOE governor says"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:ems="12"
+        android:id="@+id/txt_title"
+        android:textSize="17sp"
+        android:maxLines="3"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        />
+
+
+    <TextView
+        android:id="@+id/txt_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="italic"
+        android:ems="40"
+        android:maxLines="2"
+        android:text="“I’m going to say this very bluntly again,” he added. “Buy them only if you’re prepared to lose all your money.”"
+        />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

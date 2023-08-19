@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="mainViewModel"
+            type="com.newsapp.ui.news.NewsViewModel" />
+    </data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_box_shape"
+    tools:context=".ui.news.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/rl_header"
+        android:layout_marginTop="20dp"
+
+        android:layout_height="60dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/search_box_shape"
+        android:layout_margin="10dp"
+        android:layout_toStartOf="@+id/img_bell"
+        android:layout_height="60dp"
+       >
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search here"
+            android:textSize="13sp"
+            android:background="@null"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/img_ser"
+            android:layout_centerVertical="true"
+            android:fontFamily="sans-serif-condensed"
+            />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/img_ser"
+            android:src="@drawable/ic_search"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="15dp"
+
+            />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:id="@+id/img_bell"
+        android:layout_height="24dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_notification"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        />
+
+
+    </RelativeLayout>
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/rl_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_level"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/headlines_level"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-black"
+        />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        app:layout_constraintTop_toBottomOf="@+id/txt_level"
+        android:layout_marginTop="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:id="@+id/recycler_view"
+        android:layout_marginEnd="20dp"
+        tools:listitem="@layout/news_list_item"
+        android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

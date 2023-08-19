@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+
+    <string name="search_here_hint">Search here...</string>
+    <string name="headlines_level">Top HeadLines News</string>
+</resources>
