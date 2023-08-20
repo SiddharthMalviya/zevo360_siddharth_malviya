@@ -16,7 +16,7 @@ import javax.inject.Singleton
 class DataManager @Inject
 constructor(private val newsApiHelper: NewsApiHelper,private val dbNB:NewsDbRepo) : IDataManager {
     override fun getArticlesList(): Single<NewsResponse> {
-     return newsApiHelper.fetchNewsHeadLines()
+     return newsApiHelper.fetchNewsHeadLines(AppConstant.top_headlines+AppConstant.API_KEY)
     }
 
     override fun saveNewsDetails(list: ArrayList<NewsModelEntity>) {

@@ -8,7 +8,7 @@ import retrofit2.http.Path
 interface NewsApiHelper {
 
 //    @GET("{fullUrl}")
-    @GET("https://newsapi.org/v2/top-headlines?country=us&apiKey=eb5aa2ba73734ce69d0d5abd772da8c8")
-    fun fetchNewsHeadLines():Single<NewsResponse>
+    @GET("{fullUrl}")
+    fun fetchNewsHeadLines(@Path("fullUrl") fullUrl:String):Single<NewsResponse>
 }
 
